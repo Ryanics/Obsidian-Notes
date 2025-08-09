@@ -1,0 +1,7 @@
+{
+  "remoteURL": "git@github.com:Ryanics/Obsidian-Notes.git",
+  "gitLocation": "",
+  "syncinterval": 5,
+  "isSyncOnLoad": true,
+  "checkStatusOnLoad": true
+}
