@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arc Cache Config for ZFS.md",
+                "file": "Setting up ZFS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arc Cache Config for ZFS"
+              "title": "Setting up ZFS"
             }
           }
         ],
@@ -214,10 +214,10 @@
   },
   "active": "36eb144b2036634d",
   "lastOpenFiles": [
-    "ZFS Configuration.md",
-    "Arc Cache Config for ZFS.md",
-    "Setting up ZFS.md",
     "Makin' a FUCKIN' NOTE because Rose told me to (setting up Obsidian Notes).md",
+    "Arc Cache Config for ZFS.md",
+    "ZFS Configuration.md",
+    "Setting up ZFS.md",
     "Testing.md"
   ]
 }
