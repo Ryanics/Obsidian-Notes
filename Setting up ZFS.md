@@ -5,5 +5,7 @@
 		-Install the zfs packages themselves `sudo dnf install zfs -y `
 		-Load the kernel module `modprobe zfs`
 2. Check zfs to verify there isn't a zfs pool set up. `sudo zfs list` and check `sudo zpool status` 
-3. Check multi
-4. Create a zfs pool. `sudo zpool create (name_of_pool) (type_of_raid) /dev/dev1 /dev/dev2 (all devices you want added to the pool`
+3. Check multipath for multipath devices and their drives. Use the multipath devices in the next step. `sudo multipath -ll`
+4. Create a zfs pool. `sudo zpool create (name_of_pool) (type_of_raid) /dev/dev1 /dev/dev2 (all devices you want added to the pool` The command used for the current set up is `sudo zpool create tank raidz2 /dev/mapper/mpatha /dev/mapper/mpathb /dev/mapper/mpathc /dev/mapper/mpathd /dev/mapper/mpathf -f`
+5. After setting up the pool, it's good to check the status of the pool to see if it got properly set up, if you have all devices apart of the pool, and if there are any errors. You can do this with `sudo zpool status`.
+6. 

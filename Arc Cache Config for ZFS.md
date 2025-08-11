@@ -13,3 +13,5 @@ From there, use this command, `sudo nvim /etc/modprobe/zfs.conf` to open the *zf
 Once you are saved, run `sudo dracut --regenerate-all --force
 `. 
 This command overrides the current intramfs image with a new image that is generated. This is used because we added a new line in the zfs.conf file in modprobe.
+
+At any given time, if you need to check your arc cache, and it's usage, you can run the command `arc_summary| grep Most`. 
