@@ -12,4 +12,4 @@ Now that the device that you want to use for connecting your desktop to the driv
 5. Log into the target. `sudo iscsiadm -m node -T iqn.2025-08.com.example:tank -p (target_ip_from_targetcli) --login`. If you have an authentication error, check to verify that you have the correct IQN in the initiatorname.iscsi file in `/etc/iscsi`. 
 6. Once you have the connection up and know the configs aren't going to be changed any more, you can make the login persistent. `sudo iscsiadm -m node -T iqn.2025-08.com.example:tank -p (target_ip_from_before) --op update -n node.startup -v automatic`.
 
-Regardless of if you are on step 5 or step 6, ver
+Regardless of if you are on step 5 or step 6, verify the drive/zvol is showing correctly with lsblk. 
