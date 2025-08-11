@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ISCSI setup.md",
+                "file": "Targetcli.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ISCSI setup"
+              "title": "Targetcli"
             }
           }
         ]
@@ -171,8 +171,8 @@
   },
   "active": "6660124b3f9fe2dd",
   "lastOpenFiles": [
-    "Targetcli.md",
     "ISCSI setup.md",
+    "Targetcli.md",
     "Arc Cache Config for ZFS.md",
     "ZFS Configuration.md",
     "Setting up ZFS.md",
