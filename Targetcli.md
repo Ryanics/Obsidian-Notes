@@ -4,4 +4,6 @@
 2. `sudo targetcli` opens targetcli for configuring the connection for iscsi.
 3. `/backstores/block create tank_games /dev/zvol/tank/iscs-vol` Creates a block storage device named tank_games and points it toward the zvol that got set up
 4. `/iscsi create iqn.2025-08.com.example:games` Make an IQN, it can be in any format that you'd like, but this format is good practice. 
-5. ``/iscsi/iqn.2025-08.com.example:games/tpg1 set attribute authentication=0`` and ``
+5. ``/iscsi/iqn.2025-08.com.example:games/tpg1 set attribute authentication=0`` and `/iscsi/iqn.2025-08.com.example:games/tpg1 set attribute generate_node_acls=0` Disables CHAP and automatic ACL generation, for manual control, especially since this drive will not be pushed over the internet.
+6. `/iscsi/iqn.2025-08.com.example:games/tpg1/portals delete 0.0.0.0 3260` then `/iscsi/iqn.2025-08.com.example:games/tpg1/portals create (ip address here) 3260`
+7. 
