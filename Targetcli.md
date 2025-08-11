@@ -9,4 +9,4 @@
 7. ``/iscsi/iqn.2025-08.com.example:games/tpg1/luns create /backstores/block/tank_games`` Sets up a LUN, a Logic Unit Number, a logical number with a specific numerical identifier which in this case facilitates access to the block data.
 8. ``/iscsi/iqn.2025-08.com.example:games/tpg1/acls create iqn.2025-08.com.fedora:client`` and `/iscsi/iqn.2025-08.com.example:games/tpg1/acls/iqn.2025-08.com.fedora:client/luns create /backstores/block/tank_games` Creates a client IQN which, and sets targetcli to only allow this IQN to access the target, the zvol. 
 9. Make sure to go back to the root directory of targetcli. `cd /`  and run `saveconfig` which will save your config. Once you are done, make sure that you enable and start target. `sudo systemctl enable target`  `sudo systemctl start target` 
-10. **IMPORTANT** Make sure to set your client's IQN. 
+10. **IMPORTANT** Make sure to set your client's IQN. Go to your ISCSI folder `cd /etc/iscsi`  and open the initiatorname.iscsi file. `sudo nvim initiatorname.iscsi` And from there, input `InitiatorName=(whatever client IQN you set up)` save and exit. Now, move onto ISCSI setup.
