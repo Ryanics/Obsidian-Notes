@@ -10,4 +10,6 @@ In order to change it, you must run `echo 193273528320 | sudo tee /sys/module/zf
 
 From there, use this command, `sudo nvim /etc/modprobe/zfs.conf` to open the *zfs.conf* file and add the line `options zfs zfs_arc_max=193273528320`.
 
-Once you are saved, run `sudo dracut -f`. This command 
+Once you are saved, run `sudo dracut --regenerate-all --force
+`. 
+This command overrides the current intramfs image with a new image that is generated. This is used because we added a new line in the zfs.conf file in modprobe.
