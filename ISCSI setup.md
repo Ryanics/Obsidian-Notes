@@ -7,5 +7,6 @@ Now that the device that you want to use for connecting your desktop to the driv
 
 1. Make sure Iscsi is installed on your client, `sudo dnf install iscsi-initiator-utils`.
 2. Install targetcli on the server. `sudo dnf install targetcli`, if you haven't done so already. Make sure that targetcli is enabled and started after targetcli has been set up. See the Targetcli section for basic set up of targetcli. 
-3. Make sure to check in `/etc/iscsi/initiatorname.iscsi` to verify the client's IQN matches the targetcli configuration on the server. If not added, add this line or change this line to match the client IQN in the server: `InitiatorName=iqn.2025-0`
-4. Run **iscsiadm** to discover the target.
+3. Make sure to check in `/etc/iscsi/initiatorname.iscsi` to verify the client's IQN matches the targetcli configuration on the server. If not added, add this line or change this line to match the client IQN in the server: `InitiatorName=iqn.2025-08.com.fedora:client`
+4. Run **iscsiadm** to discover the target. `sudo iscsidam -m discovery -t sendtargets -p (ip that was setup in targetcli)`. If the target is not found, verify physical connections. Also check to make sure the network device you want to use is set up on the server and verify that port 3260 is open on the server. If you find the target, you can go forward to the next step.
+5. Log into the target. `sudo iscsiadm -m node -T iqn.2025-08.com.example:tank -p (target_ip_from_targetcli) --login`. If you have an authentication error, check to verify that you have the correct IQN in the initiatorname.iscsi file in `/etc/iscsi`. 
