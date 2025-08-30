@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ZFS and drive shelf setup/ISCSI setup.md",
+                "file": "ZFS and drive shelf setup/Troubleshooting ISCSI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ISCSI setup"
+              "title": "Troubleshooting ISCSI"
             }
           }
         ],
@@ -215,8 +215,10 @@
   },
   "active": "4e1d0954e7efc839",
   "lastOpenFiles": [
-    "ZFS and drive shelf setup/Moar Troubleshooting.md",
+    "ZFS and drive shelf setup/Targetcli setup and configuration.md",
+    "ZFS and drive shelf setup/Troubleshooting ISCSI.md",
     "ZFS and drive shelf setup/ISCSI setup.md",
+    "ZFS and drive shelf setup/Moar Troubleshooting.md",
     "ZFS and drive shelf setup/Arc Cache Config for ZFS.md",
     "Linux Gaming related stuff/Adding a radio station in Star Trucker.md",
     "Linux Gaming related stuff/Euro Truck Simulator 2 AND American Truck Simulator.md",
@@ -224,7 +226,6 @@
     "Linux Gaming related stuff/Reshade for games on linux.md",
     "ZFS and drive shelf setup/Makin' a FUCKIN' NOTE because Rose told me to (setting up Obsidian Notes).md",
     "ZFS and drive shelf setup/ZFS Configuration.md",
-    "ZFS and drive shelf setup/Targetcli setup and configuration.md",
     "ZFS and drive shelf setup/Setting up ZFS.md",
     "Untitled",
     "Linux Gaming related stuff",
