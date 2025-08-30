@@ -9,4 +9,4 @@ If you have having issues with ISCSI not finding the iqn, and by extension the r
 	1. To change your Ip address, you have two options, a more permanent change comes from nmcli. `nmcli con show` after you run `ip a` to verify the ip address and device you want to use go with or dont go with the device you want. From here, run the command `nmcli con modify "Name_of_device"\ipv4.addresses ipv4_address_you_want\24 \ipv4.gateway 0.0.0.0 \ipv4.method manual \ifname name_of_device(enp0s3)` 
 	2. Now bring the connection down then back up again to apply the changes. `nmcli con down "name_of_connection"` then `nmcli con up "name_of_connection"`
 	3. If you are only temporarily changing the ip4 address, you can run the `ip` command instead. `ip addr add ipv4_address/24 dev enp0s3` (dev is device)
-5. Sometimes if `ip a` doesn't give the answer you are looking for, it may be a simpler answer. Check your `iface`  in the ISCSI config. `sudo iscsiadm `
+5. Sometimes if `ip a` doesn't give the answer you are looking for, it may be a simpler answer. Check your `iface`  in the ISCSI config. `sudo iscsiadm iface` to check your ifac
