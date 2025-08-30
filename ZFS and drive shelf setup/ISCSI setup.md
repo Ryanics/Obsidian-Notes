@@ -15,3 +15,10 @@ Now that the device that you want to use for connecting your desktop to the driv
 Regardless of if you are on step 5 or step 6, verify the drive/zvol is showing correctly with lsblk. 
 
 If you need to clear the config for some reason, use `sudo targetcli` and then type 'clearconfig' to do so
+
+
+TROUBLESHOOTING Iscsi:
+When you are trying to get the connection set up, you do not need to have iscsi-initiator-utils on your host machine. You just need to have those tools on the client machine. 
+
+If you have having issues with ISCSI not finding the iqn, and by extension the raid drive, there are a few things you can check.
+1. Check physical connections, try not to unplug if you dont have to but if they a
